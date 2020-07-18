@@ -1,0 +1,186 @@
+// our team - templates-team.php, section-team.php
+.team-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .content {
+        width: 60%;
+        padding: 1rem 0 2rem 0;
+    }
+}
+
+.all-members {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    .member {
+        flex: 0 0 25%;
+        background: $black;
+        color: $black;
+        position: relative;
+        height: 22rem;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        .member-img {
+            object-fit: cover;
+            max-height: 100%;
+            width: auto;
+            transition: 0.3s ease-in-out;
+        }
+        .fields {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0.5rem;
+            right: 0rem;
+            list-style: none;
+            display: flex;
+            padding-inline-start: 0;
+            padding: 0;
+            transition: 0.3s ease-in-out;
+            li {
+                margin-right: 1rem;
+                i {
+                    color: $white;
+                    font-size: 1.1rem;
+                    transition: 0.3s ease-in-out;
+                }
+                &:hover {
+                    i {
+                        color: $salmon;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    .text-wrapper {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgba($white, 0.95);
+        padding: 1rem;
+        color: $black;
+        transition: 0.3s ease-in-out;
+        .name {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+        }
+        .title {
+            font-size: 0.8rem;
+        }
+    }
+    .member a:hover {
+        .member-img {
+            transform: scale(1.2);
+            opacity: 0.8;
+            transition: 0.3s ease-in-out;
+        }
+        .fields {
+            opacity: 1 !important;
+            pointer-events: all !important;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .all-members {
+        .member {
+            flex: 0 0 50%;
+        }
+    }
+    .team-wrapper {
+        .content {
+            width: 80%;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .all-members {
+        .member {
+            flex: 0 0 100%;
+            height: auto;
+        }
+    }
+}
+
+// single page - team-member.php
+.member {
+    display: flex;
+    .member-img-wrapper {
+        overflow: hidden;
+        .member-img {
+            object-fit: cover;
+            min-height: 100%;
+            width: auto;
+            transition: 0.3s ease-in-out;
+        }
+        .member-img:hover {
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+        }
+    }
+    .member-info {
+        padding: 2.5rem;
+        letter-spacing: 1px;
+        .name {
+            margin-bottom: 0;
+        }
+        .title {
+            color: $salmon;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .content {
+            padding: 2rem 0;
+            font-size: 0.95rem;
+        }
+        .fields {
+            list-style: none;
+            display: flex;
+            padding-inline-start: 0;
+            padding: 0;
+            li {
+                margin-right: 1rem;
+                i {
+                    color: $black;
+                    font-size: 1.1rem;
+                    transition: 0.3s ease-in-out;
+                }
+                &:hover {
+                    i {
+                        font-size: 1.3rem;
+                        color: $blue;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .member {
+        .member-info {
+            padding: 1.5rem;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .member {
+        flex-direction: column;
+        .member-info {
+            padding: 2rem;
+        }
+    }
+}

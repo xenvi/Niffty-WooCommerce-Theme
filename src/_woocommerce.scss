@@ -1,0 +1,140 @@
+// information notifs
+  // info
+  .woocommerce-error, .woocommerce-info, .woocommerce-message {
+    padding: 1rem 0 !important;
+  }
+  .woocommerce-info {
+    background: none !important;
+    border-top: none;
+    letter-spacing: 1px;
+    color: $blue;
+    &:before {
+      content: '' !important;
+    }
+    a {
+      text-decoration: none;
+      color: $black !important;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $blue !important;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  // success
+  .woocommerce-message {
+    background: none !important;
+    border-top: none;
+    letter-spacing: 1px;
+    color: green;
+    text-align: center;
+    &:before {
+      content: '' !important;
+    }
+  }
+  // error
+  .woocommerce-error {
+    background: none !important;
+    border-top: none;
+    letter-spacing: 1px;
+    color: $salmon;
+    text-align: center;
+    &:before {
+      content: '' !important;
+    }
+  }
+
+  // wishlist
+  .wishlist-title {
+    display: none !important;
+  }
+
+  .wishlist-items-wrapper tr {
+    td {
+    padding: 1rem 9px !important;
+  }
+  .product-price, .product-stock-status {
+    text-align: left;
+    }
+}
+  .table.wishlist_table tbody td, table.wishlist_table thead th {
+    border-top: none !important;
+  }
+  .woocommerce table.shop_table{
+    letter-spacing: 1px;
+    thead {
+      th {
+        font-size: 0.9rem;
+      }
+    }
+    tbody {
+        border: none !important;
+        padding: 2rem 0 !important;
+        .product-name a {
+          color: $black;
+          text-decoration: none;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $blue;
+            transition: 0.3s ease-in-out;
+          }
+        .product-thumbnail {
+          a img {
+            min-width: 75px !important;
+          }
+        }
+      }
+    }
+  }
+  // add to cart button
+  .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    outline: none;
+    background: $black !important;
+    color: $white !important;
+    border-radius: 0 !important;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background: $blue !important;
+      box-shadow: 0 0 0.5rem $blue !important;
+      transition: 0.3s ease-in-out;
+    }
+    &:active {
+      transform: scale(0.9);
+      transition: 0.3s ease-in-out;
+    }
+  }
+  // mobile
+  .wishlist_table.mobile {
+    letter-spacing: 1px;
+    .item-details {
+      .product-name {
+        a {
+          text-decoration: none;
+          color: $black;
+          font-size: 1.2rem !important;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $blue !important;
+            transition: 0.3s ease-in-out;
+          }
+
+        }
+      }
+    }
+    .product-remove a {
+      color: $salmon;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        font-size: 1.2rem;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  .yith_wcwl_wishlist_footer .yith-wcwl-share {
+    float: none !important;
+    margin-left: auto;
+    letter-spacing: 1px;
+    .yith-wcwl-share-title {
+      font-size: 0.9rem;
+    }
+  }
