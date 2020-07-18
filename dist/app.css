@@ -11142,8 +11142,8 @@ header .container {
 }
 
 .landing .content a:hover {
-  background: #F78888;
-  box-shadow: 0 0 0.5rem #F78888;
+  background: #90CCF4;
+  box-shadow: 0 0 0.5rem #5DA2D5;
   transition: 0.3s ease-in-out;
 }
 
@@ -11326,6 +11326,7 @@ header .container {
   text-decoration: none;
   background: #000;
   color: #fff;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
@@ -11400,8 +11401,8 @@ header .container {
 }
 
 .categories .half a:hover {
-  background: #5DA2D5;
-  box-shadow: 0 0 0.5rem #5DA2D5;
+  background: #F78888;
+  box-shadow: 0 0 0.5rem #F78888;
   transition: 0.3s ease-in-out;
 }
 
@@ -12344,6 +12345,181 @@ table.wishlist_table thead th {
 
 .yith_wcwl_wishlist_footer .yith-wcwl-share .yith-wcwl-share-title {
   font-size: 0.9rem;
+}
+
+#customer_login {
+  letter-spacing: 1px;
+}
+
+#customer_login h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#customer_login .woocommerce-form {
+  border: none;
+  padding: 0 0 1rem 0;
+}
+
+#customer_login .woocommerce-form input[type=text],
+#customer_login .woocommerce-form input[type=password],
+#customer_login .woocommerce-form input[type=email] {
+  width: 100%;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form input[type=text]:focus,
+#customer_login .woocommerce-form input[type=password]:focus,
+#customer_login .woocommerce-form input[type=email]:focus {
+  outline: none;
+  box-shadow: 0 0 0.4rem rgba(93, 162, 213, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form .form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+#customer_login .woocommerce-form .woocommerce-button {
+  background: #000;
+  color: #fff;
+  margin-right: 0;
+  outline: none;
+  width: 8rem;
+  padding: 1rem 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form .woocommerce-button:hover {
+  background: #5DA2D5 !important;
+  box-shadow: 0 0 0.5rem #5DA2D5 !important;
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form .woocommerce-button:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form .woocommerce-LostPassword {
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+#customer_login .woocommerce-form .woocommerce-LostPassword:hover {
+  color: #F78888;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover {
+  color: #5DA2D5;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content {
+  letter-spacing: 1px;
+}
+
+.woocommerce-MyAccount-content a {
+  color: #5DA2D5;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content a:hover {
+  color: #90CCF4;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content .button {
+  background: #000 !important;
+  color: #fff !important;
+  margin-right: 0;
+  outline: none;
+  padding: 1rem 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content .button:hover {
+  background: #5DA2D5 !important;
+  box-shadow: 0 0 0.5rem #5DA2D5 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content .button:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content .woocommerce-form-row label {
+  width: 100%;
+}
+
+.woocommerce-MyAccount-content input[type=text],
+.woocommerce-MyAccount-content input[type=password],
+.woocommerce-MyAccount-content input[type=email],
+.woocommerce-MyAccount-content input[type=tel] {
+  width: 100%;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content input[type=text]:focus,
+.woocommerce-MyAccount-content input[type=password]:focus,
+.woocommerce-MyAccount-content input[type=email]:focus,
+.woocommerce-MyAccount-content input[type=tel]:focus {
+  outline: none;
+  box-shadow: 0 0 0.4rem rgba(93, 162, 213, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.woocommerce-MyAccount-content span em {
+  display: block;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.woocommerce-MyAccount-content legend {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.woocommerce-MyAccount-content .select2-container .select2-selection--single {
+  height: 2.75rem;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Address-title h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.woocommerce-MyAccount-content address {
+  margin-bottom: 2rem;
 }
 
 .woocommerce-billing-fields {

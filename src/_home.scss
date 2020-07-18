@@ -34,8 +34,8 @@
             box-shadow: 0.5rem 0.5rem 0 $blue;
             transition: 0.3s ease-in-out;
             &:hover {
-                background: $salmon;
-                box-shadow: 0 0 0.5rem $salmon;
+                background: $lightblue;
+                box-shadow: 0 0 0.5rem $blue;
                 transition: 0.3s ease-in-out;
             }
             &:active {
@@ -190,6 +190,7 @@
                 text-decoration: none;
                 background: $black;
                 color: $white;
+                font-weight: bold;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 0.85rem;
@@ -260,8 +261,8 @@
             box-shadow: 0.3rem 0.3rem 0 $salmon;
             transition: 0.3s ease-in-out;
             &:hover {
-                background: $blue;
-                box-shadow: 0 0 0.5rem $blue;
+                background: $salmon;
+                box-shadow: 0 0 0.5rem $salmon;
                 transition: 0.3s ease-in-out;
             }
             &:active {
