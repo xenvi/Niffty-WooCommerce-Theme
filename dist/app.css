@@ -11102,17 +11102,63 @@ header .container {
 .landing {
   width: 100%;
   height: 70vh;
+  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+}
+
+.landing .content {
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  padding: 1.5rem;
+}
+
+.landing .content h5 {
+  font-weight: bold;
+  margin: 0;
+  color: #5DA2D5;
+  text-shadow: 0.1rem 0.1rem 0 #90CCF4;
+}
+
+.landing .content h1 {
+  margin: -1rem 0 2rem;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 0 0.3rem #fff;
+}
+
+.landing .content a {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  box-shadow: 0.5rem 0.5rem 0 #5DA2D5;
+  transition: 0.3s ease-in-out;
+}
+
+.landing .content a:hover {
+  background: #F78888;
+  box-shadow: 0 0 0.5rem #F78888;
+  transition: 0.3s ease-in-out;
+}
+
+.landing .content a:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
 }
 
 .header-img {
+  position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
   min-width: 100%;
   min-height: 100%;
+  z-index: 0;
 }
 
 .home-container {
@@ -11185,7 +11231,7 @@ header .container {
 
 .carousel {
   text-align: center;
-  margin: 1.5rem;
+  margin: 3rem 2rem;
   letter-spacing: 1px;
 }
 
@@ -11224,6 +11270,12 @@ header .container {
 #woo-product-carousel-wrapper-878011636 .owl-item .item .cart a.added_to_cart.wc-forward:active {
   transform: scale(0.9);
   transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 700px) {
+  .carousel p {
+    width: 90%;
+  }
 }
 
 .newsletter {
@@ -11289,6 +11341,78 @@ header .container {
 @media only screen and (max-width: 550px) {
   .newsletter .mc4wp-form-fields label {
     width: 80% !important;
+  }
+}
+
+.categories {
+  display: flex;
+  width: 100%;
+  min-height: 15rem;
+  flex-wrap: wrap;
+}
+
+.categories .half {
+  width: 50%;
+  height: 100%;
+  min-height: 15rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories .half img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.categories .half:hover img {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+.categories .half h3,
+.categories .half a {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: #fff;
+}
+
+.categories .half h3 {
+  text-shadow: 0 0 0.2rem #000;
+}
+
+.categories .half a {
+  background: #000;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0.3rem 0.3rem 0 #F78888;
+  transition: 0.3s ease-in-out;
+}
+
+.categories .half a:hover {
+  background: #5DA2D5;
+  box-shadow: 0 0 0.5rem #5DA2D5;
+  transition: 0.3s ease-in-out;
+}
+
+.categories .half a:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .half {
+    width: 100% !important;
   }
 }
 

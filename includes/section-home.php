@@ -15,7 +15,6 @@
                 <p><?php the_field('card_3_description') ?></p>
             </div>
         </div>
-
         
         <div class="carousel top-rated-products">
             <h3><?php the_field('top_products_title') ?></h3>
@@ -24,7 +23,20 @@
                     <?php dynamic_sidebar('featured-products');?>
                 <?php endif;?>
         </div>
-
+    </div>
+    <div class="categories">
+        <div class="half left">
+            <img src="<?php the_field('left_cat_image') ?>" alt="<?php the_field('left_cat_title') ?>">
+            <h3><?php the_field('left_cat_title') ?></h3>
+            <a class="shop-button" href="<?php echo wc_get_page_permalink( 'shop' ); ?>"> SHOP </a>
+        </div>
+        <div class="half right">
+            <img src="<?php the_field('right_cat_image') ?>" alt="<?php the_field('right_cat_title') ?>">
+            <h3><?php the_field('right_cat_title') ?></h3>
+            <a class="shop-button" href="<?php echo wc_get_page_permalink( 'shop' ); ?>"> SHOP </a>
+        </div>
+    </div>
+    <div class="container">
         <div class="carousel new-products">
             <h3><?php the_field('new_products_title') ?></h3>
             <p><?php the_field('new_products_description') ?></p>
