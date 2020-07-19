@@ -6,7 +6,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     letter-spacing: 1px;
     .content {
         position: relative;
@@ -52,6 +52,8 @@
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
+    top: 0;
+    left: 0;
   }
   .home-container {
       padding: 0 0 2rem;
@@ -86,6 +88,7 @@
             transition: 0.3s ease-in-out;
         }
         p {
+            width: 100%;
             text-align: center;
             font-size: 0.9rem;
         }
@@ -226,12 +229,10 @@
 .categories {
     display: flex;
     width: 100%;
-    min-height: 15rem;
     flex-wrap: wrap;
     .half {
         width: 50%;
-        height: 100%;
-        min-height: 15rem;
+        height: 15rem;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -240,6 +241,8 @@
         justify-content: center;
         img {
             position: absolute;
+            top: 0;
+            left: 0;
             object-fit: cover;
             min-width: 100%;
             min-height: 100%;
@@ -255,6 +258,7 @@
         h3, a {
             position: relative;
             z-index: 2;
+            padding: 10px;
             font-weight: bold;
             color: $white;
         }

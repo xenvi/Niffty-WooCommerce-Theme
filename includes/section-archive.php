@@ -15,7 +15,7 @@
         <div class="blog-content">
             <p class="subtext"><?php echo get_the_date('F j, Y');?> by <?php echo $fname;?> <?php echo $lname;?></p>
             <a href="<?php the_permalink();?>" class="title"><?php the_title();?></a>
-            <span><?php the_excerpt(); ?></span>
+            <?php the_excerpt(); ?>
             <a href="<?php the_permalink();?>" class="readmore">Continue reading</a>
         </div>
    </div>

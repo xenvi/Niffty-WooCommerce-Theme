@@ -104,7 +104,22 @@ jQuery(document).ready(function () {
   });
   jQuery(".mobile-menu li:has(ul)").click(function () {
     jQuery("ul", this).toggleClass('slide2');
-  }); // GSAP ANIM
+  }); // position sticky IE support
+  // Check if Navigator is Internet Explorer
+
+  if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > -1) {
+    // Scroll event check
+    jQuery(window).scroll(function (event) {
+      var scroll = jQuery(window).scrollTop(); // Activate sticky for IE if scrolltop is more than 51px
+
+      if (scroll > 51) {
+        jQuery('.main-nav-wrapper').addClass("sticky-ie");
+      } else {
+        jQuery('.main-nav-wrapper').removeClass("sticky-ie");
+      }
+    });
+  } // GSAP ANIM
+
 
   var tl = gsap.timeline();
   tl.from("#small-landing", {

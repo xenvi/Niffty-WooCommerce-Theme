@@ -10948,6 +10948,7 @@ header .info-nav-container {
 header .info-nav-container .info-nav {
   justify-content: space-between;
   padding: 1rem 0;
+  height: 51px;
   font-size: 0.8rem;
   opacity: 0.7;
   letter-spacing: 1px;
@@ -11110,6 +11111,7 @@ header .container {
 
 .mobile-nav {
   position: absolute;
+  z-index: 900;
   width: 100%;
   height: auto;
   transform: scaleY(0);
@@ -11246,6 +11248,10 @@ header .container {
   font-size: 0.7rem;
 }
 
+.sticky-ie {
+  position: fixed !important;
+}
+
 .landing {
   width: 100%;
   height: 70vh;
@@ -11253,7 +11259,7 @@ header .container {
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   letter-spacing: 1px;
 }
 
@@ -11307,6 +11313,8 @@ header .container {
   min-width: 100%;
   min-height: 100%;
   z-index: 0;
+  top: 0;
+  left: 0;
 }
 
 .home-container {
@@ -11348,6 +11356,7 @@ header .container {
 }
 
 .cards .card p {
+  width: 100%;
   text-align: center;
   font-size: 0.9rem;
 }
@@ -11502,14 +11511,12 @@ header .container {
 .categories {
   display: flex;
   width: 100%;
-  min-height: 15rem;
   flex-wrap: wrap;
 }
 
 .categories .half {
   width: 50%;
-  height: 100%;
-  min-height: 15rem;
+  height: 15rem;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -11520,6 +11527,8 @@ header .container {
 
 .categories .half img {
   position: absolute;
+  top: 0;
+  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
   min-width: 100%;
@@ -11537,6 +11546,7 @@ header .container {
 .categories .half a {
   position: relative;
   z-index: 2;
+  padding: 10px;
   font-weight: bold;
   color: #fff;
 }
@@ -12026,6 +12036,7 @@ header .container {
 }
 
 .archive-post .blog-content {
+  width: 100%;
   text-align: center;
   padding: 1.5rem 2rem;
 }
@@ -12374,6 +12385,7 @@ footer {
   list-style: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  padding-left: 0;
 }
 
 .footer-container .nav-links ul li {
@@ -13869,6 +13881,7 @@ img {
   list-style: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  padding-left: 0;
 }
 
 .widgets .widget ul li {
