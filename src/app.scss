@@ -253,6 +253,31 @@ img {
       color: rgba($black, 0.4);
     }
   }
+  // search widget
+  .search {
+    display: flex;
+    input {
+      border: none;
+      outline: none;
+      width: 100%;
+      background: rgba($lightblue, 0.2);
+      padding: 0.5rem 1rem;
+    }
+    button[type='submit'] {
+      padding: 0.25rem 0.75rem !important;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      background: $black;
+      color: $white;
+      transition: 0.3s ease-in-out;
+      &:hover {
+          background: $salmon;
+          box-shadow: 0 0 0.5rem $salmon;
+          transition: 0.3s ease-in-out;
+      }
+    }
+  }
   // search form
   .searchform {
     div {
@@ -353,4 +378,9 @@ img {
       transition: 0.3s ease-in-out;
     }
   }
+}
+
+// search page
+.search-page {
+  margin-bottom: 2rem;
 }

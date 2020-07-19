@@ -11,7 +11,7 @@
 <section class="page-wrap">
     <div class="container">
         <section class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-9 search-page">
                 <?php get_template_part('includes/section','search-results'); ?>
                 <?php echo paginate_links();?>
             </div>

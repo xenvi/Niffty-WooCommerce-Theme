@@ -24,7 +24,7 @@ header {
     }
     .main-nav-wrapper {
         width: 100%;
-        height: 5rem !important;
+        height: 4.5rem !important;
         position: sticky;
         top: 0;
         z-index: 998;
@@ -48,7 +48,9 @@ header {
                     margin: 0;
                     height: 100%;
                     .menu-item-has-children:hover .sub-menu {
-                        display: block;
+                        opacity: 1;
+                        pointer-events: all;
+                        transition: 0.3s ease;
                     }
                     li {
                         height: 100%;
@@ -64,27 +66,32 @@ header {
                             text-decoration: none;
                             transition: 0.3s ease;
                             &:hover {
+                                cursor: pointer;
                                 color: $blue;
                                 transition: 0.3s ease;
                             }
                         }
                         .sub-menu {
-                            display: none;
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: 0.3s ease;
+                            display: block;
                             position: absolute;
                             top: 100%;
                             left: 0;
                             background: #fff;
                             box-shadow: 1px 5px 30px rgba($black,0.1);
                             margin: 0;
-                            padding: 0;
                             list-style: none;
                             width: 200px;
                             height: auto;
+                            padding-inline-start: 0;
                             padding: 1rem 1.5rem;
                             z-index: 1000;
                             li {
                                 width: 100%;
                                 a {
+                                    cursor: pointer;
                                     font-size: 0.8rem;
                                     padding: 0.5rem 0;
                                     letter-spacing: 1px;
@@ -111,8 +118,8 @@ header {
             opacity: 0;
             pointer-events: none;
             transition: 0.3s ease-in-out;
-            .search {
-                text-align: center;
+            .woocommerce-product-search {
+                justify-content: center;
                 input {
                     width: 25rem;
                     padding: 0.25rem 0.5rem;
@@ -127,9 +134,10 @@ header {
                     outline: none;
                     border: none;
                     padding: 0.5rem 1rem;
+                    box-shadow: none;
                     transition: 0.3s ease;
                     &:hover {
-                        font-size: 1.3rem;
+                        color: $salmon;
                         transition: 0.3s ease;
                     }
                 }
@@ -143,3 +151,106 @@ header {
         width: 100%;
     }
 }
+
+// mobile menu
+.mobile-nav{
+    position: absolute;
+    width:100%;
+    height: auto;
+    transform:scaleY(0);
+    transform-origin:top;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba($black, 0.1);
+    border-bottom: 1px solid rgba($black, 0.1);
+    transition: 0.5s ease-in-out;
+    .menu-mobile-menu-container{ 
+        width: 100%;
+        .mobile-menu {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding-inline-start: 0;
+            margin: 0;
+            li {
+                text-align: left;
+                border-bottom: 1px solid rgba($black, 0.1);
+                padding: 1rem 2rem;
+                transition: 0.3s ease-in-out;
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    color: $black;
+                    text-decoration: none;
+                    transition: 0.3s ease-in-out;
+                    i {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                &:hover {
+                    a {
+                        color: $blue;
+                        transition: 0.3s ease-in-out;
+                    }
+                    background:rgba($blue, 0.02);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+.mobile-sub-menu {
+    list-style: none;
+    li {
+        &:last-child {
+            border: none !important;
+        }
+        a {
+            color: $black !important;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                color: $blue !important;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+.hamburger {
+    color: $black;
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    i {
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.slide {
+    transform:scaleY(1) !important;
+    pointer-events: all !important;
+    transition: 0.5s ease-in-out !important;
+}
+
+  @media only screen and (min-width: 770px){
+    .menu-main-menu-container{
+        display: flex !important;
+    }
+    .mobile-nav, .hamburger{
+        display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 769px){
+    .menu-main-menu-container{
+        display: none !important;
+    }
+    .mobile-nav, .hamburger{
+        display: flex;
+    }
+  } 

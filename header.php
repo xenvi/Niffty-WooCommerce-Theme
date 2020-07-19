@@ -35,16 +35,6 @@
                 'menu_class' => 'main-menu'
                 )
             ); ?>
-            <!-- <div class="mobile-nav">
-                <?php wp_nav_menu(
-                    array(
-                    'theme_location' => 'mobile-menu',
-                    'menu_class' => 'mobile-menu'
-                    )
-                ); ?>
-                <span class="close-menu"><i class="fas fa-times"></i></span>
-            </div> -->
-            <!-- <span class="hamburger"><i class="fas fa-bars"></i></span> -->
         </div>
 
         <div class="menu">
@@ -54,10 +44,20 @@
                 'menu_class' => 'shop-menu'
                 )
             ); ?>
+            <span class="hamburger"><i class="fas fa-bars"></i></span>
         </div>
     </div>
+    <div class="mobile-nav">
+                <?php wp_nav_menu(
+                    array(
+                    'theme_location' => 'mobile-menu',
+                    'menu_class' => 'mobile-menu'
+                    )
+                ); ?>
+                
+    </div>
     <div class="search-wrap">
-        <?php get_search_form();?>
+        <?php get_product_search_form();?>
     </div>
 </div>
 </header>

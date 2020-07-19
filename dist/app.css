@@ -10960,7 +10960,7 @@ header .info-nav-container .info-nav span {
 
 header .main-nav-wrapper {
   width: 100%;
-  height: 5rem !important;
+  height: 4.5rem !important;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -10995,7 +10995,9 @@ header .main-nav-wrapper .main-nav .menu ul {
 }
 
 header .main-nav-wrapper .main-nav .menu ul .menu-item-has-children:hover .sub-menu {
-  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s ease;
 }
 
 header .main-nav-wrapper .main-nav .menu ul li {
@@ -11017,22 +11019,27 @@ header .main-nav-wrapper .main-nav .menu ul li a {
 }
 
 header .main-nav-wrapper .main-nav .menu ul li a:hover {
+  cursor: pointer;
   color: #5DA2D5;
   transition: 0.3s ease;
 }
 
 header .main-nav-wrapper .main-nav .menu ul li .sub-menu {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
   background: #fff;
   box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.1);
   margin: 0;
-  padding: 0;
   list-style: none;
   width: 200px;
   height: auto;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   padding: 1rem 1.5rem;
   z-index: 1000;
 }
@@ -11042,6 +11049,7 @@ header .main-nav-wrapper .main-nav .menu ul li .sub-menu li {
 }
 
 header .main-nav-wrapper .main-nav .menu ul li .sub-menu li a {
+  cursor: pointer;
   font-size: 0.8rem;
   padding: 0.5rem 0;
   letter-spacing: 1px;
@@ -11065,11 +11073,11 @@ header .main-nav-wrapper .search-wrap {
   transition: 0.3s ease-in-out;
 }
 
-header .main-nav-wrapper .search-wrap .search {
-  text-align: center;
+header .main-nav-wrapper .search-wrap .woocommerce-product-search {
+  justify-content: center;
 }
 
-header .main-nav-wrapper .search-wrap .search input {
+header .main-nav-wrapper .search-wrap .woocommerce-product-search input {
   width: 25rem;
   padding: 0.25rem 0.5rem;
   border: none;
@@ -11078,17 +11086,18 @@ header .main-nav-wrapper .search-wrap .search input {
   border-bottom: 1px solid #000;
 }
 
-header .main-nav-wrapper .search-wrap .search button {
+header .main-nav-wrapper .search-wrap .woocommerce-product-search button {
   background: none;
   color: #000;
   outline: none;
   border: none;
   padding: 0.5rem 1rem;
+  box-shadow: none;
   transition: 0.3s ease;
 }
 
-header .main-nav-wrapper .search-wrap .search button:hover {
-  font-size: 1.3rem;
+header .main-nav-wrapper .search-wrap .woocommerce-product-search button:hover {
+  color: #F78888;
   transition: 0.3s ease;
 }
 
@@ -11097,6 +11106,124 @@ header .container {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.mobile-nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transform: scaleY(0);
+  transform-origin: top;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out;
+}
+
+.mobile-nav .menu-mobile-menu-container {
+  width: 100%;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 0;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu li {
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu li a i {
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu li:hover {
+  background: rgba(93, 162, 213, 0.02);
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-nav .menu-mobile-menu-container .mobile-menu li:hover a {
+  color: #5DA2D5;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-sub-menu {
+  list-style: none;
+}
+
+.mobile-sub-menu li:last-child {
+  border: none !important;
+}
+
+.mobile-sub-menu li a {
+  color: #000 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-sub-menu li a:hover {
+  color: #5DA2D5 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger {
+  color: #000;
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.hamburger i {
+  transition: 0.2s ease-in-out;
+}
+
+.slide {
+  transform: scaleY(1) !important;
+  pointer-events: all !important;
+  transition: 0.5s ease-in-out !important;
+}
+
+@media only screen and (min-width: 770px) {
+  .menu-main-menu-container {
+    display: flex !important;
+  }
+
+  .mobile-nav,
+  .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .menu-main-menu-container {
+    display: none !important;
+  }
+
+  .mobile-nav,
+  .hamburger {
+    display: flex;
+  }
 }
 
 .landing {
@@ -11120,8 +11247,8 @@ header .container {
 .landing .content h5 {
   font-weight: bold;
   margin: 0;
-  color: #5DA2D5;
-  text-shadow: 0.1rem 0.1rem 0 #90CCF4;
+  color: #000;
+  text-shadow: 0 0 0.3rem #fff;
 }
 
 .landing .content h1 {
@@ -11174,7 +11301,7 @@ header .container {
 
 .cards .card {
   width: 33.3333%;
-  height: 120px;
+  min-height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11196,11 +11323,17 @@ header .container {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  transition: 0.3s ease-in-out;
 }
 
 .cards .card p {
   text-align: center;
   font-size: 0.9rem;
+}
+
+.cards .card:hover h4 {
+  color: #5DA2D5;
+  transition: 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 780px) {
@@ -11414,6 +11547,122 @@ header .container {
 @media only screen and (max-width: 800px) {
   .half {
     width: 100% !important;
+  }
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+  background: #000;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  cursor: pointer;
+  background: #5DA2D5;
+  color: #fff;
+  text-decoration: none !important;
+  font-size: 2rem;
+  text-shadow: 0 0.7rem 0.7rem rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.about-wrapper .image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+}
+
+.about-wrapper .image img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.about-wrapper .image:hover img {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+.company-info {
+  letter-spacing: 1px;
+  padding: 1rem 0 3rem;
+}
+
+.company-info h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.company-info hr {
+  background-color: #000;
+  width: 4rem;
+  height: 3px;
+}
+
+.company-info p {
+  text-align: center;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.about-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.about-cards .card {
+  width: 33.3333%;
+  min-height: 120px;
+  display: flex;
+  letter-spacing: 1px;
+  border: none;
+  padding: 1.5rem 1rem;
+}
+
+.about-cards .card h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.about-cards .card p {
+  font-size: 0.9rem;
+}
+
+.about-cards .card hr {
+  margin: 0 0 1rem;
+  background-color: #000;
+  width: 2rem;
+  height: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.about-cards .card:hover hr {
+  width: 4rem;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 780px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .cards .card {
+    width: 100%;
   }
 }
 
@@ -13626,6 +13875,34 @@ img {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.widgets .search {
+  display: flex;
+}
+
+.widgets .search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: rgba(144, 204, 244, 0.2);
+  padding: 0.5rem 1rem;
+}
+
+.widgets .search button[type=submit] {
+  padding: 0.25rem 0.75rem !important;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.widgets .search button[type=submit]:hover {
+  background: #F78888;
+  box-shadow: 0 0 0.5rem #F78888;
+  transition: 0.3s ease-in-out;
+}
+
 .widgets .searchform div {
   display: flex;
 }
@@ -13730,5 +14007,9 @@ img {
   background: #F78888;
   box-shadow: 0 0 0.5rem #F78888;
   transition: 0.3s ease-in-out;
+}
+
+.search-page {
+  margin-bottom: 2rem;
 }
 

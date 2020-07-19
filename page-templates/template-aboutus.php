@@ -14,11 +14,12 @@ Template Name: About Us
     }
     ?>
 </section>
-<section class="page-wrap">
+<section class="page-wrap about-section">
     <div class="container">
-        <?php get_template_part('includes/section','content'); ?>
         <?php get_template_part('includes/section','about'); ?>
     </div>
+
 </section>
+<a href="<?php echo home_url(); ?>/contact" class="contact-button">GET IN CONTACT</a>
 
 <?php get_footer(); ?>
