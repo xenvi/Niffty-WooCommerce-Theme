@@ -44,6 +44,7 @@
                 'menu_class' => 'shop-menu'
                 )
             ); ?>
+            <a href="<?php echo wc_get_cart_url() ?>" class="cart-count"><?php echo $woocommerce->cart->cart_contents_count ?></a>
             <span class="hamburger"><i class="fas fa-bars"></i></span>
         </div>
     </div>

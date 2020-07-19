@@ -102,24 +102,22 @@ jQuery(document).ready(function () {
   jQuery(".hamburger").click(function () {
     jQuery(".mobile-nav").toggleClass('slide');
   });
-  jQuery('.mobile-sub-menu').hide();
-  jQuery(".mobile-sub-menu li:has(ul)").click(function () {
-    jQuery("ul", this).slideToggle('slow');
+  jQuery(".mobile-menu li:has(ul)").click(function () {
+    jQuery("ul", this).toggleClass('slide2');
   });
 });
 
 function toggle() {
-  if (jQuery(window).width() >= 700) {
+  if (jQuery(window).width() >= 770) {
     jQuery('.nav.menu-main-menu-container').show();
     jQuery('.sub-menu').removeClass('mobile-sub-menu');
+    jQuery('.sub-menu').show();
   } else {
     jQuery('.nav.menu-main-menu-container').hide();
 
     if (!jQuery('.sub-menu').hasClass('mobile-sub-menu')) {
       jQuery('.sub-menu').addClass('mobile-sub-menu');
     }
-
-    jQuery('.mobile-sub-menu').hide();
   }
 }
 

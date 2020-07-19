@@ -303,3 +303,15 @@ if( defined( 'YITH_WCWL' ) && ! function_exists( 'yith_wcwl_move_wishlist_button
 add_filter( 'wp_nav_menu_items', function ( $menu ) {
     return str_replace( '<a href="#"', '<a', $menu );
 } );
+
+// add count to cart
+add_filter( 'woocommerce_add_to_cart_fragments', 'niffty_add_to_cart_fragment' );
+ 
+function niffty_add_to_cart_fragment( $fragments ) {
+ 
+    global $woocommerce;
+ 
+	$fragments['.cart-count'] = '<a href="' . wc_get_cart_url() . '" class="cart-count">' . $woocommerce->cart->cart_contents_count . '</a>';
+ 	return $fragments;
+ 
+ }

@@ -11170,6 +11170,10 @@ header .container {
 }
 
 .mobile-sub-menu {
+  overflow: hidden;
+  max-height: 0;
+  pointer-events: none;
+  transition: max-height 0.5s ease-out;
   list-style: none;
 }
 
@@ -11204,6 +11208,12 @@ header .container {
   transition: 0.5s ease-in-out !important;
 }
 
+.slide2 {
+  max-height: 1000px !important;
+  pointer-events: all !important;
+  transition: max-height 0.5s ease-in !important;
+}
+
 @media only screen and (min-width: 770px) {
   .menu-main-menu-container {
     display: flex !important;
@@ -11224,6 +11234,16 @@ header .container {
   .hamburger {
     display: flex;
   }
+}
+
+.cart-count {
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  padding: 0 5px;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 0.7rem;
 }
 
 .landing {

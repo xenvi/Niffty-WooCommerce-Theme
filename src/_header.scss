@@ -206,6 +206,10 @@ header {
     }
 }
 .mobile-sub-menu {
+    overflow: hidden;
+    max-height: 0;
+    pointer-events: none;
+    transition: max-height 0.5s ease-out;
     list-style: none;
     li {
         &:last-child {
@@ -236,6 +240,11 @@ header {
     pointer-events: all !important;
     transition: 0.5s ease-in-out !important;
 }
+.slide2 {
+    max-height: 1000px !important;
+    pointer-events: all !important;
+    transition: max-height 0.5s ease-in !important;
+}
 
   @media only screen and (min-width: 770px){
     .menu-main-menu-container{
@@ -254,3 +263,14 @@ header {
         display: flex;
     }
   } 
+
+  // cart count
+  .cart-count {
+      background: $black;
+      border-radius: 50%;
+      color: $white;
+      padding: 0 5px;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      font-size: 0.7rem;
+  }
