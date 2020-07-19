@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_main_content' );
             <?php dynamic_sidebar('shop-sidebar');?>
         <?php endif;?>
     </div>
-	<div class="col-lg-9">
+	<div class="col-lg-9 animate">
 <?php
 if ( woocommerce_product_loop() ) {
 

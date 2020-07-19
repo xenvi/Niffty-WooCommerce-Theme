@@ -5,7 +5,7 @@
     $lname = get_the_author_meta('last_name');
 ?>
 
-   <div class="archive-post mb-5">
+   <div class="archive-post mb-5 animate">
         <span class="cat"><?php the_category(' / '); ?></span>
         
         <?php if(has_post_thumbnail()):?>

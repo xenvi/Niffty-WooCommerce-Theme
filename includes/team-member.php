@@ -6,7 +6,7 @@
                         <img src="<?php the_post_thumbnail_url('profile');?>" alt="<?php the_title();?>" class="img-fluid member-img"/>
                     <?php endif;?>
                 </div>
-                <div class="col-lg-6 member-info">
+                <div class="col-lg-6 member-info animate">
                     <h3 class="name"><?php the_title();?></h3>
                     <span class="title"><?php the_field('role');?></span>
                     <div class="content"><?php the_content(); ?></div>

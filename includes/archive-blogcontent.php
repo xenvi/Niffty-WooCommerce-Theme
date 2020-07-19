@@ -2,25 +2,25 @@
 
 <section class="blog-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php if(has_post_thumbnail()):?>
-        <img src="<?php the_post_thumbnail_url('post-large');?>" alt="<?php the_title();?>" class="img-fluid"/>
+        <img src="<?php the_post_thumbnail_url('post-large');?>" alt="<?php the_title();?>" class="img-fluid animate"/>
     <?php endif;?>
 
     <?php 
         $fname = get_the_author_meta('first_name', $post->post_author);
         $lname = get_the_author_meta('last_name', $post->post_author);
     ?>
-    <p class="subtext">By <?php echo $fname;?> <?php echo $lname;?>, <?php echo get_the_date('F j, Y');?> in
+    <p class="subtext animate">By <?php echo $fname;?> <?php echo $lname;?>, <?php echo get_the_date('F j, Y');?> in
     <?php
         $categories = get_the_category();
         foreach($categories as $cat):?>
-            <a href="<?php echo get_category_link($cat->term_id);?>" class="category-tag">
+            <a href="<?php echo get_category_link($cat->term_id);?>" class="category-tag animate">
                 <?php echo $cat->name;?> 
             </a>
         <?php endforeach;?></p>
 
-    <div class="content"><?php the_content(); ?></div>
+    <div class="content animate"><?php the_content(); ?></div>
 
-   <div class="tag-wrapper">
+   <div class="tag-wrapper animate">
    <i class="fas fa-tags"></i>
         <?php
         $tags = get_the_tags();
@@ -34,7 +34,7 @@
 
     <?php $comments_number = get_comments_number();
         if ($comments_number):?>
-            <div class="comments">
+            <div class="comments animate">
                 <h3><?php echo $comments_number; ?> Comments</h3>
                 <ol>
                     <?php
@@ -54,11 +54,11 @@
                 <?php paginate_comments_links(); ?>
             </div>
         <?php else: ?>
-            <div class="comments">
+            <div class="comments animate">
                 <p class="no-comments">There are no comments.</p>
             </div>
     <?php endif;?>
-    <?php comment_form(); ?>
+    <div class="animate"><?php comment_form(); ?></div>
 </section>
 
 <?php endwhile; else: endif; ?>

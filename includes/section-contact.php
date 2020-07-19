@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate">
     <div class="row">
      <h3>Contact Info</h3>
     </div>

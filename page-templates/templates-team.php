@@ -18,7 +18,7 @@ Template Name: Our Team
     <div class="container team-wrapper">
         <?php get_template_part('includes/section','content'); ?>
     </div>
-    <div class="all-members">
+    <div class="all-members animate">
         <?php get_template_part('includes/section','team'); ?>
     </div>
     
