@@ -275,6 +275,10 @@ header {
       margin-bottom: 2rem;
       font-weight: bold;
       font-size: 0.7rem;
+      &:hover {
+          color: $white;
+          text-decoration: none;
+      }
   }
 
   // sticky ie

@@ -15,7 +15,7 @@ get_header(); ?>
 </section>
 
 <section class="page-wrap">
-    <div class="container animate">
+    <div class="container">
         <?php get_template_part('includes/section','content'); ?>
     </div>
 </section>
